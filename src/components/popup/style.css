@@ -1,0 +1,41 @@
+.popup {
+  color: black;
+}
+
+.popup__content {
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.popup__box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 100;
+  background-color: white;
+  border-radius: 8px;
+  position: fixed;
+  box-shadow: 0px -4px 12px rgba(23, 40, 83, 0.04);
+}
+
+.popup__overlay {
+  background-color: black;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  position: fixed;
+}
+
+.popup__box.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup__overlay.active {
+  opacity: 0.8;
+  pointer-events: all;
+}
