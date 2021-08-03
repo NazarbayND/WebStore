@@ -1,10 +1,54 @@
 .nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 2rem 6rem;
+  width: 81rem;
 }
 
-.concept {
-  align-self: center;
+.grid--3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 2rem 6rem;
+  grid-gap: 3rem;
+  justify-items: center;
+}
+
+.category {
+  padding: 2rem 6rem;
+  width: 81rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+}
+.nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__primary {
+  justify-content: flex-start;
+}
+.nav__secondary {
+  justify-content: flex-end;
+}
+
+.footer__background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  cursor: pointer;
+}
+
+.social-media {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
 }

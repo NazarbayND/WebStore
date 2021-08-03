@@ -5,17 +5,18 @@ import React from "react";
 export const CategoryCard = () => {
   return (
     <div className="card card--category">
-      <div className="img img--category">
-        {" "}
-        <img src={categoryImage} alt="" />
-      </div>
+      <img
+        className="card-category__image"
+        src={categoryImage}
+        alt="category"
+      />
 
-      <p>Office clothes</p>
-      <div>
-        <p>Shorts</p>
-        <p>Something</p>
-        <p>Jempers</p>
-        <p>...</p>
+      <p className="card-category__name text text--primary">Office clothes</p>
+      <div className="card__footer">
+        <p className="text">Shorts</p>
+        <p className="text">Something</p>
+        <p className="text">Jempers</p>
+        <p className="text">...</p>
       </div>
     </div>
   );

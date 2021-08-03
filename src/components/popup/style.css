@@ -3,7 +3,6 @@
 }
 
 .popup__content {
-  padding: 1rem;
   padding-top: 0;
 }
 
@@ -17,6 +16,7 @@
   border-radius: 8px;
   position: fixed;
   box-shadow: 0px -4px 12px rgba(23, 40, 83, 0.04);
+  z-index: 100;
 }
 
 .popup__overlay {
@@ -29,6 +29,7 @@
   bottom: 0;
   pointer-events: none;
   position: fixed;
+  z-index: 99;
 }
 
 .popup__box.active {
@@ -38,4 +39,106 @@
 .popup__overlay.active {
   opacity: 0.8;
   pointer-events: all;
+}
+
+.popup-content {
+  width: 25rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-popup__title {
+  padding-top: 5rem;
+}
+
+.shop-popup__text {
+  padding: 3rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.notifications {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #edf2ff;
+  padding: 1rem 0;
+}
+
+.btn--danger {
+  border: 0;
+  outline: 0;
+  color: red;
+  background: none;
+  align-self: flex-start;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+.switch-container {
+  padding-left: 12rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.9rem;
+  width: 1.9rem;
+  left: 0.05rem;
+  bottom: 0.05rem;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4376fb;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4376fb;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.5rem);
+  -ms-transform: translateX(1.5rem);
+  transform: translateX(1.5rem);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 2rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
