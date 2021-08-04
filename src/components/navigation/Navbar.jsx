@@ -1,24 +1,41 @@
 import React from "react";
 import { SearchForm } from "../forms/SearchForm";
 import "./style.css";
-import { ReactComponent as UserIcon } from "../../assets/user.svg";
+
+import { NavLink } from "react-router-dom";
+import { Account } from "../Account";
+import { useSelector } from "react-redux";
+import { totalAmountAndPrice } from "../../store/products/products";
+
 export const Navbar = () => {
+  const total = useSelector((state) => totalAmountAndPrice(state));
   return (
-    <div className="nav-bar">
-      <div className="nav__item nav__primary">
-        <p className="text text--primary">Главная</p>
-        <p className="text text--primary">Корзина</p>
-      </div>
-      <div className="nav__item nav__main">
-        <p className="text text--accent">Concept</p>
-      </div>
-      <div className="nav__item nav__secondary">
-        <SearchForm />
-        <div className="account">
-          <p className="text text--primary">Войти</p>
-          <UserIcon />
+    <React.Fragment>
+      <div className="nav-bar">
+        <div className="nav__item nav__primary">
+          <NavLink
+            to="/home"
+            className="text text--nav"
+            activeClassName="nav--selected"
+          >
+            Главная
+          </NavLink>
+          <NavLink
+            to="/shopping"
+            className="text text--nav"
+            activeClassName="nav--selected"
+          >
+            Корзина{total.amount && `(${total.amount})`}
+          </NavLink>
+        </div>
+        <div className="nav__item nav__main">
+          <p className="text text--accent">Concept</p>
+        </div>
+        <div className="nav__item nav__secondary">
+          <SearchForm />
+          <Account />
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };

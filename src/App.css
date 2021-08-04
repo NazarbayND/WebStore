@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -31,6 +35,7 @@
   margin: 0;
   font-style: normal;
   line-height: 1.2rem;
+  text-decoration: none;
 }
 
 .text--primary {
@@ -39,6 +44,16 @@
   color: #172853;
   align-self: center;
   padding: 1rem;
+}
+
+.text--nav {
+  font-weight: 500;
+  color: #b0b3bc;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.nav--selected {
+  color: #172853;
 }
 
 .text--accent {

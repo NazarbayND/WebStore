@@ -10,10 +10,7 @@ const Popup = ({ open, close, content, xButton }) => {
         {xButton && <Xbtn className="icon--fixed right" onClick={close} />}
         <div className="popup__content">{content}</div>
       </div>
-      <div
-        className={open ? "popup__overlay active" : "popup__overlay"}
-        onClick={close}
-      ></div>
+      <div className={open ? "popup__overlay active" : "popup__overlay"}></div>
     </div>
   );
 };

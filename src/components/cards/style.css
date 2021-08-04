@@ -23,7 +23,6 @@
   justify-content: space-between;
   padding: 0 1rem 1rem;
   font-size: 0.8rem;
-  opacity: 0.8;
 }
 
 .card--items {
@@ -35,6 +34,9 @@
 
 .card-items__image {
   width: 10rem;
+  height: 10rem;
+  border-radius: 8px;
+  margin: 0.5rem;
 }
 
 .card__body {
@@ -88,6 +90,7 @@
   display: flex;
   align-items: center;
   padding-right: 5rem;
+  height: fit-content;
 }
 .card-expanded__body {
   padding: 0 3rem;
@@ -103,9 +106,10 @@
   align-items: center;
 }
 .card-expanded__image {
+  border-radius: 8px;
   height: 8rem;
   width: 6rem;
-  padding: 0.1rem 3rem;
+  margin: 0.5rem 3rem;
 }
 
 .expanded-add-delete {
