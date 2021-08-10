@@ -13,7 +13,7 @@ import { ShoppingPage } from "./pages/ShoppingPage";
 function App() {
   return (
     <div className="App">
-      <Popup open={false} content={<LoginForm />} />
+      <Popup open={true} content={<LoginForm />} />
       <Navbar />
       <Switch>
         <Route path="/home">

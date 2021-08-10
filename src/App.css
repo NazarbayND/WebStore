@@ -12,23 +12,18 @@ a {
   background: #4376fb;
   border-radius: 6px;
   border: 0;
-  font-size: 1rem;
-  padding: 1rem;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
   color: #ffffff;
-  width: 100%;
   cursor: pointer;
+  font-weight: 500;
+  line-height: 22px;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  transition: background 0.2s ease-in-out;
 }
 
-.login-form {
-  display: flex;
-  justify-content: center;
-
-  flex-direction: column;
-  width: 20rem;
-  padding: 1rem;
+.btn:hover {
+  background: #172853;
 }
 
 .text {
@@ -75,24 +70,60 @@ a {
   align-self: center;
 }
 
-.input {
+.login-form {
   display: flex;
-  align-items: center;
-  border: 0;
-  outline: 0;
-  border-bottom: 1px solid #edf2ff;
+  justify-content: center;
+  flex-direction: column;
+  width: 20rem;
   padding: 1rem;
-  margin-bottom: 1rem;
 }
-.input__search {
-  border-radius: 6px;
-  outline: 0;
+
+.login-form__body {
+  padding-bottom: 2rem;
+}
+
+/* Forms */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
   border: 0;
-  padding: 0.8rem;
+  outline: 0;
+  padding: 1rem;
+}
+
+.input--primary {
+  border-bottom: 1px solid #edf2ff;
+  width: 90%;
+}
+
+.input--primary:focus {
+  border-bottom: 1px solid #4376fb;
+}
+
+.input--danger {
+  border-bottom: 1px solid #ff5050;
+}
+
+.input--danger:focus {
+  border-bottom: 1px solid #ff5050;
+}
+
+.input--danger::placeholder {
+  color: #ff5050;
+}
+
+.input--search {
+  border-radius: 6px;
   width: 15rem;
 }
 
-.input:focus {
-  border-bottom: 1px solid #4376fb;
-  outline: 0;
+.input--search::placeholder {
+  background-image: url("./assets/search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0.25rem;
+  color: #b0b3bc;
 }

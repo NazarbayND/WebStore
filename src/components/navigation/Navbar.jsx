@@ -25,7 +25,7 @@ export const Navbar = () => {
             className="text text--nav"
             activeClassName="nav--selected"
           >
-            Корзина{total.amount && `(${total.amount})`}
+            Корзина{total.amount > 0 && `(${total.amount})`}
           </NavLink>
         </div>
         <div className="nav__item nav__main">

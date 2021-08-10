@@ -1,14 +1,14 @@
 import React from "react";
 
-
 export const SearchForm = () => {
   return (
-    <div>
+    <form>
       <input
         type="text"
-        className="input__search"
-        placeholder="type for search"
+        name="search"
+        className="input input--search"
+        placeholder="     type for search"
       />
-    </div>
+    </form>
   );
 };
